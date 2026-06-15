@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>Manas Portfolio</h2>
+
+    <ul>
+        <li><a href="landingpage.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="temperature.html">Project</a></li>
+    </ul>
+</nav>
+
+<div class="converter">
+
+    <h1>Temperature Converter</h1>
+
+    <input
+        type="text"
+        id="tempInput"
+        placeholder="Enter Temperature"
+    >
+
+    <select id="unit">
+
+        <option value="celsius">
+            Celsius
+        </option>
+
+        <option value="fahrenheit">
+            Fahrenheit
+        </option>
+
+        <option value="kelvin">
+            Kelvin
+        </option>
+
+    </select>
+
+    <button onclick="convertTemp()">
+        Convert
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
