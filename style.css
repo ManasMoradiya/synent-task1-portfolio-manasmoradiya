@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Space Grotesk',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    background:#050505;
+    color:#ffffff;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Animated Background */
+
+body::before{
+    content:'';
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at 15% 20%, rgba(0,255,255,.12), transparent 25%),
+    radial-gradient(circle at 85% 70%, rgba(0,119,255,.12), transparent 25%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.03), transparent 40%);
+    z-index:-1;
+}
+
+/* Navbar */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(10,10,10,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav h2{
+    color:#00e5ff;
+    font-size:28px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+    position:relative;
+}
+
+nav ul li a:hover{
+    color:#00e5ff;
+}
+
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    background:#00e5ff;
+    left:0;
+    bottom:-5px;
+    transition:.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-weight:800;
+    color:white;
+    text-shadow:
+    0 0 10px #00e5ff,
+    0 0 20px #00e5ff;
+}
+
+.hero p{
+    font-size:1.3rem;
+    color:#cccccc;
+    margin-top:20px;
+    max-width:700px;
+}
+
+/* Buttons */
+
+.buttons{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    margin:10px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    color:white;
+    background:linear-gradient(
+    135deg,
+    #00e5ff,
+    #0066ff
+    );
+    transition:.4s;
+    box-shadow:
+    0 0 15px rgba(0,229,255,.4);
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 0 25px rgba(0,229,255,.8),
+    0 0 50px rgba(0,229,255,.4);
+}
+
+/* Portfolio */
+
+.portfolio{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.profile{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #00e5ff;
+    box-shadow:
+    0 0 30px rgba(0,229,255,.4);
+}
+
+.portfolio h1{
+    font-size:3rem;
+    margin-top:20px;
+}
+
+.portfolio h3{
+    margin-top:10px;
+    color:#00e5ff;
+}
+
+.portfolio p{
+    max-width:700px;
+    margin:20px auto;
+    line-height:1.8;
+    color:#cfcfcf;
+}
+
+/* Skills */
+
+.skills{
+    margin-top:30px;
+}
+
+.skills span{
+    display:inline-block;
+    margin:8px;
+    padding:12px 25px;
+    border-radius:30px;
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+    background:#111;
+    transition:.4s;
+}
+
+.skills span:hover{
+    background:#00e5ff;
+    color:black;
+    transform:translateY(-4px);
+}
+
+/* Project Card */
+
+.card{
+    max-width:500px;
+    margin:40px auto;
+    padding:30px;
+    background:#111111;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.4);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+/* Temperature Converter */
+
+.converter{
+    width:90%;
+    max-width:500px;
+    margin:80px auto;
+    background:#111111;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.4);
+}
+
+.converter h1{
+    margin-bottom:25px;
+    color:#00e5ff;
+}
+
+.converter input,
+.converter select{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#1c1c1c;
+    color:white;
+    font-size:16px;
+    border:1px solid #333;
+}
+
+.converter input::placeholder{
+    color:#888;
+}
+
+.converter input:focus,
+.converter select:focus{
+    border-color:#00e5ff;
+    box-shadow:
+    0 0 15px rgba(0,229,255,.4);
+}
+
+.converter button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    background:linear-gradient(
+    135deg,
+    #00e5ff,
+    #0066ff
+    );
+    transition:.4s;
+}
+
+.converter button:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 0 20px rgba(0,229,255,.5);
+}
+
+#result{
+    margin-top:25px;
+    padding:20px;
+    background:#1c1c1c;
+    border-radius:15px;
+    color:#00ff88;
+    font-size:22px;
+    font-weight:600;
+    border:1px solid rgba(0,255,136,.2);
+}
+
+/* Footer */
+
+footer{
+    margin-top:50px;
+    padding:25px;
+    text-align:center;
+    background:#0d0d0d;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#888;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00e5ff;
+    border-radius:10px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .profile{
+        width:180px;
+        height:180px;
+    }
+
+    .portfolio h1{
+        font-size:2.2rem;
+    }
+
+    .converter{
+        padding:25px;
+    }
+}
